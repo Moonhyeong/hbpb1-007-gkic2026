@@ -24,6 +24,12 @@ This page is a **copy of the verified sibling page with event branding changed o
 content, figures, claims and layout are identical and were not re-edited — the sibling had already
 been reviewed at 375 / 760 / 1280 px. If a scientific fact changes, update **both** pages.
 
+**No BIO-Europe / BIO USA branding on this page.** Earlier drafts carried the past events as "Also at"
+lines in the meta description, a hero badge, two *Featured At* rows and the footer; all were removed
+on 2026-10-07 at the PI's instruction so the page reads as a G-KIC-only asset. The generator asserts
+this — `build_landing.py` prints the count of surviving `BIO-Europe` / `BIO USA` / `San Diego` /
+`Köln` strings and flags any as 🔴. Do not reintroduce them.
+
 ## Event
 
 - **Programme:** G-KIC-NST Partnering Day 2026 · KIST × NST Global Partnering
