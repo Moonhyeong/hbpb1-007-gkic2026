@@ -30,6 +30,19 @@ on 2026-10-07 at the PI's instruction so the page reads as a G-KIC-only asset. T
 this — `build_landing.py` prints the count of surviving `BIO-Europe` / `BIO USA` / `San Diego` /
 `Köln` strings and flags any as 🔴. Do not reintroduce them.
 
+## Figure borders
+
+The three data figures arrived with **three different borders baked into the PNGs** — `efficacy.png`
+had a soft shadow plus an `#E9E9E9` line, `ocular-delivery.png` a 1 px `#A6A6A6` line, and
+`iop-safety.png` none at all. Since `.data-figure` already supplies a uniform
+`1px solid var(--border)` card, the baked borders are **stripped** instead of matched:
+`../gkic-partnering-2026/figtrim.py` detects the border band on each side, removes the leftover
+rounded-corner arcs, and crops to content. `build_landing.py` runs it over the copied images, and
+`make_onepager.py` uses the same module for the PDF — so the web page and the one-pager agree.
+
+Re-running `build_landing.py` re-copies the untrimmed originals from the sibling page and trims them
+again, so the result is reproducible. **Do not hand-edit the PNGs in `images/`.**
+
 ## Event
 
 - **Programme:** G-KIC-NST Partnering Day 2026 · KIST × NST Global Partnering
